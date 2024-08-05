@@ -137,7 +137,7 @@ if(isset($_POST['kirim'])){
 
 <footer class="bg-white rounded-lg shadow m-4 absolute bottom-0 justify-center items-center dark:bg-gray-800">
     <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between items-center justify-center">
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://instagram.com/rayhanma__" target="_blank" class="hover:underline">Mr22xx™</a>. All Rights Reserved
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© <span id="date"></span> <a href="https://instagram.com/rayhanma__" target="_blank" class="hover:underline">Mr22xx™</a>. All Rights Reserved
       <span>inspired by NGL</span>
     </span>
     
@@ -146,7 +146,13 @@ if(isset($_POST['kirim'])){
 </footer>
 
 
-        
+    <script>
+        const date = new Date()
+        const year = date.getFullYear();
+
+        const showYear =document.getElementById("date")
+        showYear.innerText =year;
+    </script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 </body>
